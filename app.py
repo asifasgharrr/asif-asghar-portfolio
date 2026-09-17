@@ -42,6 +42,13 @@ def security_headers(response):
         "script-src 'self' 'unsafe-inline'; font-src 'self' data:; connect-src 'self' https:; "
         "frame-ancestors 'self'; base-uri 'self'; form-action 'self'"
     )
+    # Load final visual overrides on every HTML page without editing each template.
+    if response.mimetype == "text/html":
+        body = response.get_data(as_text=True)
+        override = '<link rel="stylesheet" href="/static/css/visual-overrides.css?v=final">'
+        if override not in body and "</head>" in body:
+            body = body.replace("</head>", override + "</head>")
+            response.set_data(body)
     return response
 
 @app.route("/")
