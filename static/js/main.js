@@ -1,5 +1,11 @@
 
 (() => {
+  /* Load the semantic theme layer after the base stylesheet so every theme can override hard-coded legacy colors. */
+  const themeCss = document.createElement('link');
+  themeCss.rel = 'stylesheet';
+  themeCss.href = '/static/css/theme-fixes.css';
+  document.head.appendChild(themeCss);
+
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const fine = window.matchMedia('(pointer:fine)').matches;
 
@@ -102,7 +108,7 @@
       document.body.classList.add('theme-lock');
       requestAnimationFrame(() => (options.find(o => o.classList.contains('active')) || options[0])?.focus());
     };
-    trigger?.addEventListener('click', () => panel.classList.contains('open') ? closePanel() : openPanel());
+    trigger?.addEventListener('click', () => panel?.classList.contains('open') ? closePanel() : openPanel());
     close?.addEventListener('click', closePanel);
     panel?.addEventListener('click', e => { if (e.target === panel) closePanel(); });
     options.forEach(o => o.addEventListener('click', () => { apply(o.dataset.theme); closePanel(); }));
