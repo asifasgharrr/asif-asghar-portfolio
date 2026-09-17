@@ -1,0 +1,288 @@
+[
+  {
+    "slug": "izi-rate-analysis",
+    "number": "01",
+    "category": "Pricing & Operations",
+    "title": "IZI Operations Rate Analysis",
+    "short": "Persistent pricing intelligence for rates, routes, FX, margins and follow-up.",
+    "description": "A persistent operational application designed to organize rate calls, competitor rates, routes, pricing changes, API margins, alerts, evidence and reporting.",
+    "problem": "Pricing work involves changing rates, routes, foreign exchange, competitor observations and operational follow-up. The objective was to move recurring rate analysis into a structured application rather than a loose collection of manual steps.",
+    "approach": "Built a persistent workflow around rate records, business context, comparisons, changes, alerts and reporting. The public case study intentionally omits real rates, clients and commercial rules.",
+    "capabilities": [
+      "Rate tracking",
+      "Route analysis",
+      "FX context",
+      "Margin analysis",
+      "Alerts",
+      "Persistent reporting"
+    ],
+    "architecture": [
+      "Python",
+      "PySide6",
+      "SQLite",
+      "Pricing workflows"
+    ],
+    "role": "Business requirements, workflow design, application development, data persistence and reporting.",
+    "confidential": "Internal pricing workflow. Public presentation is generalized.",
+    "featured": true,
+    "stack": [
+      "Python",
+      "PySide6",
+      "SQLite",
+      "Pricing workflows"
+    ],
+    "image": "rate-operations.jpg"
+  },
+  {
+    "slug": "izi-routing-manager",
+    "number": "02",
+    "category": "Pricing & Provider Control",
+    "title": "IZI Routing Manager",
+    "short": "An auditable route and provider decision workspace for comparing offers, FX movement and compliance evidence.",
+    "description": "A local-browser decision-support application for managed country–operator–category routes. It brings provider/product/rate evidence, route comparison, product matching, pricing-scheme compliance and decision records into one governed workflow.",
+    "problem": "Provider and route decisions depend on more than a single rate or FX number. The workflow needed a structured way to compare eligible offers, preserve product equivalence evidence and separate operational decisions from compliance checks.",
+    "approach": "Designed the workflow around normalized route identities, provider comparisons, cost and FX analysis, product-match review, pricing-scheme evidence, an action inbox and audit/history. The application advises and records; live portal changes remain a separate controlled action.",
+    "capabilities": [
+      "Route master and decision inbox",
+      "Provider/API comparison",
+      "Cost & FX analysis",
+      "Product equivalence review",
+      "Pricing-scheme compliance",
+      "Audit, evidence and history"
+    ],
+    "architecture": [
+      "Python",
+      "Streamlit",
+      "SQLite",
+      "Route governance",
+      "Decision workflows"
+    ],
+    "stack": [
+      "Python",
+      "Streamlit",
+      "SQLite",
+      "Pricing",
+      "Route Governance"
+    ],
+    "role": "Business problem framing, workflow design, analytical logic, application development, controls and QA.",
+    "confidential": "Internal company system. Public portfolio visuals use generated demonstration data and do not expose proprietary provider rates, routes or credentials.",
+    "featured": true,
+    "image": "routing-manager.jpg"
+  },
+  {
+    "slug": "izi-reconciliation-centre",
+    "number": "03",
+    "category": "Financial Controls",
+    "title": "IZI Reconciliation Centre",
+    "short": "A controlled workflow for reconciliation, review, evidence and auditability.",
+    "description": "A reconciliation capability covering bank movements, agent balances and portal payment controls, with drill-down, review workflow, audit trail and evidence-oriented design.",
+    "problem": "Reconciliation is not only about finding a difference; it also requires traceability, review and evidence. The workflow was designed to make exceptions easier to inspect and the review process more structured.",
+    "approach": "Modeled reconciliation around source data, matching logic, exception handling, review states and evidence. Persistent storage and audit-oriented records support repeatable operational follow-up.",
+    "capabilities": [
+      "Reconciliation workflow",
+      "Exception review",
+      "Drill-down analysis",
+      "Audit trail",
+      "Evidence capture",
+      "Control-oriented design"
+    ],
+    "architecture": [
+      "Python",
+      "SQLite",
+      "Reconciliation logic",
+      "Audit controls"
+    ],
+    "role": "Process modeling, control design, automation, QA and operational workflow development.",
+    "confidential": "Internal financial operations system. No internal source data is exposed.",
+    "featured": true,
+    "stack": [
+      "Python",
+      "SQLite",
+      "Reconciliation logic",
+      "Audit controls"
+    ],
+    "image": "reconciliation.jpg"
+  },
+  {
+    "slug": "izi-analytics",
+    "number": "04",
+    "category": "Business Intelligence",
+    "title": "IZI Analytics Offline",
+    "short": "A local analytics environment for operational, reliability and profitability intelligence.",
+    "description": "A local-first analytics environment covering operational performance, profitability, agents, countries, routes, APIs, operators, reliability, data quality and management reporting, designed around practical day-to-day business analysis.",
+    "problem": "Operational questions often require multiple views of the same underlying activity. The system was designed to bring recurring analysis into one controlled local environment rather than repeatedly rebuilding the same analytical steps.",
+    "approach": "Structured the application around ingestion, cleaning, validation, persistent master data, filters, period comparison and management-oriented outputs. The portfolio presentation focuses on architecture and analytical method rather than internal figures.",
+    "capabilities": [
+      "Data cleaning",
+      "Quality controls",
+      "Period comparison",
+      "Operational intelligence",
+      "Profitability analysis",
+      "Persistent local data"
+    ],
+    "architecture": [
+      "Python",
+      "Streamlit",
+      "SQLite",
+      "Pandas",
+      "BI workflows"
+    ],
+    "role": "Analytics workflow design, data processing, validation, application development and operational adoption.",
+    "confidential": "Internal company system. Portfolio presentation is sanitized.",
+    "featured": true,
+    "stack": [
+      "Python",
+      "Streamlit",
+      "SQLite",
+      "Pandas",
+      "BI workflows"
+    ],
+    "image": "izi-intelligence.jpg"
+  },
+  {
+    "slug": "izi-decision-engine",
+    "number": "05",
+    "category": "Decision Intelligence",
+    "title": "IZI Decision & Pricing Intelligence Engine",
+    "short": "A local decision-support system built around pricing, performance and operational choices.",
+    "description": "A single-user, offline decision-support application developed around recurring pricing, performance and operational decision problems. It combines data ingestion, validation, analysis, scenario thinking, controlled outputs and expected-vs-actual learning in one workflow.",
+    "problem": "Recurring operational decisions were spread across analysis steps and tools. The goal was to create a repeatable environment where current economics could be observed, drivers diagnosed and alternatives considered before action.",
+    "approach": "Designed a local-first workflow around structured business rules, persistent SQLite data, validation controls, analytics and scenario-oriented decision support. The system is deliberately generalized in this portfolio so no proprietary company data or commercial rules are exposed.",
+    "capabilities": [
+      "Data ingestion and validation",
+      "Performance and profitability analysis",
+      "Scenario analysis",
+      "Controlled exports",
+      "Audit / provenance",
+      "Expected-vs-actual learning"
+    ],
+    "architecture": [
+      "Python",
+      "Streamlit",
+      "SQLite",
+      "Pandas",
+      "Decision workflows"
+    ],
+    "role": "Business problem framing, analytical design, application development, validation, QA and workflow improvement.",
+    "confidential": "Internal company system. Public portfolio content uses generalized descriptions and excludes proprietary data, credentials and internal commercial details.",
+    "featured": true,
+    "stack": [
+      "Python",
+      "Streamlit",
+      "SQLite",
+      "Pandas",
+      "Decision workflows"
+    ],
+    "image": "decision-engine.jpg"
+  },
+  {
+    "slug": "performance-profitability",
+    "number": "06",
+    "category": "Analytics Evolution",
+    "title": "IZI Performance & Profitability Analytics",
+    "short": "An analytics workflow that evolved from manual work into repeatable intelligence.",
+    "description": "A progression from manual analysis and Excel into Google Sheets, Apps Script, Power BI and Python-based analytics. The work focused on repeatability, business interpretation and decision support.",
+    "problem": "The analytical challenge was not simply calculating metrics; it was making recurring analysis easier to reproduce, explain and use for business decisions.",
+    "approach": "Iterated from manual analysis to spreadsheet models, then automation, dashboards and a local Python application. Each step reduced repetitive work and increased the structure available for interpretation and follow-up.",
+    "capabilities": [
+      "Analytical modeling",
+      "Spreadsheet automation",
+      "Power BI reporting",
+      "Python analytics",
+      "Repeatable workflows",
+      "Business interpretation"
+    ],
+    "architecture": [
+      "Excel",
+      "Google Sheets",
+      "Apps Script",
+      "Power BI",
+      "Python"
+    ],
+    "role": "Analysis, modeling, automation and dashboard/reporting development.",
+    "confidential": "Public presentation focuses on methodology rather than company data.",
+    "featured": false,
+    "stack": [
+      "Excel",
+      "Google Sheets",
+      "Apps Script",
+      "Power BI",
+      "Python"
+    ],
+    "image": "performance-profitability.jpg"
+  },
+  {
+    "slug": "new-umer-holidays",
+    "number": "07",
+    "category": "Client / Web",
+    "title": "New Umer Holidays Travel Portal",
+    "short": "A production travel portal translated from business requirements into a live digital platform.",
+    "description": "A modern travel platform combining flight search, destination information, travel guides, deals and packages, WhatsApp communication, lead generation, content management and SEO-focused pages.",
+    "problem": "The business needed a stronger digital presence that could present travel services, destinations and content while supporting lead generation and future growth.",
+    "approach": "Planned the site around real business requirements, built the frontend and backend integration, structured content and SEO foundations, connected flight search, deployed the platform and continued mobile and performance optimization.",
+    "capabilities": [
+      "Flight search integration",
+      "Destination pages",
+      "Travel guides / blog",
+      "Lead generation",
+      "Content management",
+      "Technical SEO"
+    ],
+    "architecture": [
+      "Next.js",
+      "React",
+      "Tailwind CSS",
+      "Supabase",
+      "SQL",
+      "Vercel"
+    ],
+    "role": "Business requirements, feature planning, web development, backend integration, SEO, deployment and optimization.",
+    "confidential": "Public showcase repository contains project documentation and screenshots; production source remains private.",
+    "featured": true,
+    "github": "https://github.com/asifasgharrr/new-umer-holidays-travel-portal",
+    "live": "https://newumerholidays.com/",
+    "stack": [
+      "Next.js",
+      "React",
+      "Tailwind CSS",
+      "Supabase",
+      "SQL",
+      "Vercel"
+    ],
+    "image": "new-umer-holidays.jpg"
+  },
+  {
+    "slug": "sangam-dry-fruit",
+    "number": "08",
+    "category": "Client / E-commerce",
+    "title": "Sangam Dry Fruit Shopify Store",
+    "short": "Business requirements translated into a practical e-commerce experience.",
+    "description": "A Shopify implementation covering product architecture, collection structure, bilingual content, delivery rules, policies, customer experience and launch preparation.",
+    "problem": "The store needed a clear product structure, understandable delivery rules and a polished shopping experience that could be maintained by the client.",
+    "approach": "Translated business requirements into collections, product structures, delivery logic, policy content, navigation and responsive UX refinements, while keeping key store settings editable for future changes.",
+    "capabilities": [
+      "Product architecture",
+      "Collection design",
+      "Bilingual content",
+      "Delivery rules",
+      "Policy setup",
+      "UX refinement"
+    ],
+    "architecture": [
+      "Shopify",
+      "E-commerce",
+      "UX",
+      "Business requirements"
+    ],
+    "role": "Business analysis, store structure, content, delivery logic, UX refinement and launch preparation.",
+    "confidential": "Client project; public portfolio presentation avoids private credentials and sensitive customer data.",
+    "featured": false,
+    "stack": [
+      "Shopify",
+      "E-commerce",
+      "UX",
+      "Business requirements"
+    ],
+    "image": "sangam-dry-fruit.jpg"
+  }
+]
