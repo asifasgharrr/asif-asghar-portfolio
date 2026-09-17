@@ -91,3 +91,7 @@ Hero composition was tightened so the portrait remains unobstructed, technical n
 - Added keyboard focus trapping and focus restoration for the theme dialog.
 - Added long-lived caching for static image assets.
 - Preserved reduced-motion support and all four visual themes.
+
+## Deployment sync
+- GitHub repository is connected to the portfolio's Vercel project.
+- Main branch contains the latest visual override and hero composition changes.
