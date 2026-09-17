@@ -11,16 +11,11 @@ with open(BASE / "data" / "projects.json", encoding="utf-8") as f:
 PROJECT_MAP = {p["slug"]: p for p in PROJECTS}
 
 EXPERIENCE = [
-    ("2017 — 2023", "MILVIK / BIMA Mobile Pakistan", "Team Lead — Claims Operations",
-     "Led claims operations for a 20+ person team, with QA, SLA control, workflow improvement, reporting, coaching and cross-functional coordination."),
-    ("2023", "Creative Garage", "ERP Implementation Executive",
-     "Worked across ERP implementation, process-gap analysis, workflow mapping, data validation, SOPs and user training."),
-    ("2023 — 2024", "AI Information Technologies", "Customer Support Specialist",
-     "Handled technical support, issue categorization and escalation, recurring-issue tracking and customer communication."),
-    ("2024 — 2025", "New Umer Holidays", "Graphic Designer — Part-Time / Project-Based",
-     "Produced digital creative work while developing stronger analytics, BI and technical capabilities."),
-    ("2026 — Present", "IZI Services", "Business Operations Analyst — Operations & Pricing",
-     "Work across pricing, revenue, profitability, reconciliation, service operations, reporting, process improvement and internal analytics applications."),
+    ("2017 — 2023", "MILVIK / BIMA Mobile Pakistan", "Team Lead — Claims Operations", "Led claims operations for a 20+ person team, with QA, SLA control, workflow improvement, reporting, coaching and cross-functional coordination."),
+    ("2023", "Creative Garage", "ERP Implementation Executive", "Worked across ERP implementation, process-gap analysis, workflow mapping, data validation, SOPs and user training."),
+    ("2023 — 2024", "AI Information Technologies", "Customer Support Specialist", "Handled technical support, issue categorization and escalation, recurring-issue tracking and customer communication."),
+    ("2024 — 2025", "New Umer Holidays", "Graphic Designer — Part-Time / Project-Based", "Produced digital creative work while developing stronger analytics, BI and technical capabilities."),
+    ("2026 — Present", "IZI Services", "Business Operations Analyst — Operations & Pricing", "Work across pricing, revenue, profitability, reconciliation, service operations, reporting, process improvement and internal analytics applications."),
 ]
 
 SKILL_GROUPS = {
@@ -37,11 +32,7 @@ def security_headers(response):
     response.headers["Referrer-Policy"] = "strict-origin-when-cross-origin"
     response.headers["Permissions-Policy"] = "camera=(), microphone=(), geolocation=()"
     response.headers["Cache-Control"] = "public, max-age=31536000, immutable" if response.mimetype in {"text/css", "application/javascript", "image/svg+xml", "image/jpeg", "image/png", "image/webp", "image/avif"} else "no-cache"
-    response.headers["Content-Security-Policy"] = (
-        "default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; "
-        "script-src 'self' 'unsafe-inline'; font-src 'self' data:; connect-src 'self' https:; "
-        "frame-ancestors 'self'; base-uri 'self'; form-action 'self'"
-    )
+    response.headers["Content-Security-Policy"] = "default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; font-src 'self' data:; connect-src 'self' https:; frame-ancestors 'self'; base-uri 'self'; form-action 'self'"
     return response
 
 @app.route("/")
@@ -74,11 +65,8 @@ def robots():
 def sitemap():
     base_url = request.url_root.rstrip("/")
     urls = [base_url + "/"] + [base_url + f"/projects/{p['slug']}" for p in PROJECTS]
-    body = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n"
-    body += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
-    for url in urls:
-        body += f"<url><loc>{escape(url)}</loc></url>"
-    body += "</urlset>"
+    body = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">"
+    body += "".join(f"<url><loc>{escape(url)}</loc></url>" for url in urls) + "</urlset>"
     response = make_response(body)
     response.headers["Content-Type"] = "application/xml; charset=utf-8"
     return response
