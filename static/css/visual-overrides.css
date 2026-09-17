@@ -1,0 +1,31 @@
+/* FINAL VISUAL OVERRIDES: theme contrast + complete hero badge */
+body[data-theme="midnight"]{--bg:#071016;--panel:#0c151d;--panel2:#0a1118;--text:#edf4f4;--muted:#9fb0bd;--soft:#c8d2d9;--line:rgba(237,244,244,.14);--a:#64e1c8;--a2:#7aa8ff;--ink:#06110f}
+body[data-theme="arctic"]{--bg:#f3f7fa;--panel:#ffffff;--panel2:#e8f0f5;--text:#102331;--muted:#4c6272;--soft:#344c5b;--line:rgba(16,35,49,.16);--a:#008f87;--a2:#4169d8;--ink:#ffffff}
+body[data-theme="emerald"]{--bg:#f6f4ec;--panel:#fffdf7;--panel2:#eeeade;--text:#16241f;--muted:#53675e;--soft:#3c5148;--line:rgba(22,36,31,.16);--a:#078a6d;--a2:#6b55c9;--ink:#ffffff}
+body[data-theme="violet"]{--bg:#0e0d16;--panel:#171622;--panel2:#12111b;--text:#f5f2ff;--muted:#aaa5bb;--soft:#cbc5da;--line:rgba(245,242,255,.14);--a:#c5a6ff;--a2:#76d9ff;--ink:#171221}
+body[data-theme]{color:var(--text)}
+body[data-theme] .nav{background:color-mix(in srgb,var(--bg) 88%,transparent);border-color:var(--line)}
+body[data-theme] nav a,body[data-theme] .nav-pill,body[data-theme] .hero-kicker,body[data-theme] .hero-meta,body[data-theme] .lead,body[data-theme] .heading p,body[data-theme] .about-copy,body[data-theme] .project p,body[data-theme] .process article p,body[data-theme] .decision-map span,body[data-theme] .timeline-row p,body[data-theme] .timeline-row small,body[data-theme] .proof-copy p,body[data-theme] .contact-box p,body[data-theme] .case-lead,body[data-theme] .case-main>p,body[data-theme] .back,body[data-theme] footer{color:var(--muted)}
+body[data-theme] .hero h1,body[data-theme] .heading h2,body[data-theme] .contact-box h2,body[data-theme] .proof-copy h2,body[data-theme] .case-hero h1,body[data-theme] .case-main h2,body[data-theme] .project h3,body[data-theme] .skill-head h3,body[data-theme] .timeline-row h3,body[data-theme] .process article b,body[data-theme] .decision-map b,body[data-theme] .quote,body[data-theme] .numbers b,body[data-theme] .logo{color:var(--text)}
+body[data-theme] .hero h1 span,body[data-theme] .heading h2 span,body[data-theme] .contact-box h2 span,body[data-theme] .proof-copy h2 span{color:var(--muted)}
+body[data-theme] .lead strong,body[data-theme] .about-copy strong{color:var(--text)}
+body[data-theme] .eyebrow,body[data-theme] .section-label span,body[data-theme] .timeline-row time,body[data-theme] .project-meta{color:var(--a)}
+body[data-theme] .project,body[data-theme] .skill-group,body[data-theme] .process article,body[data-theme] .decision-map>div,body[data-theme] .contact-box,body[data-theme] .profile-card,body[data-theme] .ops-card,body[data-theme] .chain-item,body[data-theme] .related-card{border-color:var(--line);color:var(--text)}
+body[data-theme] .tags em,body[data-theme] .aside-tags em,body[data-theme] .skill-list span,body[data-theme] .filter,body[data-theme] .btn{color:var(--soft);border-color:var(--line)}
+body[data-theme] .filter:hover,body[data-theme] .filter.active{color:var(--ink);background:var(--a);border-color:var(--a)}
+body[data-theme] .btn.primary{color:var(--ink);background:var(--a);border-color:var(--a)}
+body[data-theme] .quote{border-left-color:var(--a)}
+body[data-theme] .terminal{background:var(--panel2);border-color:var(--line)}
+body[data-theme] .terminal-body{color:var(--soft)}
+body[data-theme] .terminal-body .dim{color:var(--muted)}
+body[data-theme] .theme-panel-inner{background:var(--panel);color:var(--text);border-color:var(--line)}
+body[data-theme] .theme-head p,body[data-theme] .theme-option small{color:var(--muted)}
+body[data-theme] .theme-option{color:var(--text);border-color:var(--line)}
+body[data-theme] .theme-option:hover,body[data-theme] .theme-option.active{border-color:var(--a);background:color-mix(in srgb,var(--a) 10%,var(--panel))}
+
+/* The badge was being clipped by .portrait-frame's overflow:hidden. Keep the photo clipped, not the badge. */
+.portrait-frame{overflow:visible!important}
+.hero-portrait{display:block;width:100%;height:100%;object-fit:cover;object-position:center 18%;border-radius:inherit}
+.portrait-badge{left:50%!important;right:auto!important;bottom:14px!important;transform:translateX(-50%);width:max-content;max-width:calc(100% - 24px);overflow:visible!important;white-space:nowrap!important;z-index:10!important;padding:8px 13px!important;font-size:8px!important;letter-spacing:.11em!important;background:rgba(7,16,22,.84)!important;color:#fff!important;border:1px solid rgba(255,255,255,.32)!important;box-shadow:0 8px 24px rgba(0,0,0,.2)}
+.portrait-badge span,.portrait-badge b{display:inline-block!important;white-space:nowrap!important}
+@media(max-width:620px){.portrait-badge{max-width:none!important;font-size:7px!important;padding:7px 10px!important;letter-spacing:.08em!important}}
