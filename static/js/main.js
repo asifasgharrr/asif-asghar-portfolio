@@ -1,11 +1,5 @@
 
 (() => {
-  /* Load the semantic theme layer after the base stylesheet so every theme can override hard-coded legacy colors. */
-  const themeCss = document.createElement('link');
-  themeCss.rel = 'stylesheet';
-  themeCss.href = '/static/css/theme-fixes.css';
-  document.head.appendChild(themeCss);
-
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const fine = window.matchMedia('(pointer:fine)').matches;
 
@@ -61,8 +55,25 @@
   const menuToggle = document.querySelector('.menu-toggle');
   const mobileMenu = document.querySelector('.mobile-menu');
   if (menuToggle && mobileMenu) {
-    const closeMenu = () => { mobileMenu.classList.remove('open'); mobileMenu.setAttribute('aria-hidden','true'); menuToggle.setAttribute('aria-expanded','false'); };
-    menuToggle.addEventListener('click', () => { const open = mobileMenu.classList.toggle('open'); mobileMenu.setAttribute('aria-hidden', String(!open)); menuToggle.setAttribute('aria-expanded', String(open)); });
+    let menuLastFocused = null;
+    const closeMenu = () => {
+      mobileMenu.classList.remove('open');
+      mobileMenu.setAttribute('aria-hidden','true');
+      mobileMenu.setAttribute('inert','');
+      menuToggle.setAttribute('aria-expanded','false');
+      menuToggle.setAttribute('aria-label','Open menu');
+      menuLastFocused?.focus?.();
+    };
+    const openMenu = () => {
+      menuLastFocused = document.activeElement;
+      mobileMenu.removeAttribute('inert');
+      mobileMenu.classList.add('open');
+      mobileMenu.setAttribute('aria-hidden','false');
+      menuToggle.setAttribute('aria-expanded','true');
+      menuToggle.setAttribute('aria-label','Close menu');
+      requestAnimationFrame(() => mobileMenu.querySelector('a')?.focus());
+    };
+    menuToggle.addEventListener('click', () => mobileMenu.classList.contains('open') ? closeMenu() : openMenu());
     mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
     document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
   }
@@ -95,6 +106,7 @@
       if (!panel) return;
       panel.classList.remove('open');
       panel.setAttribute('aria-hidden','true');
+      panel.setAttribute('inert','');
       trigger?.setAttribute('aria-expanded','false');
       document.body.classList.remove('theme-lock');
       lastFocused?.focus?.();
@@ -102,6 +114,7 @@
     const openPanel = () => {
       if (!panel) return;
       lastFocused = document.activeElement;
+      panel.removeAttribute('inert');
       panel.classList.add('open');
       panel.setAttribute('aria-hidden','false');
       trigger?.setAttribute('aria-expanded','true');
