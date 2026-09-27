@@ -36,18 +36,24 @@ def security_headers(response):
     response.headers["X-Frame-Options"] = "SAMEORIGIN"
     response.headers["Referrer-Policy"] = "strict-origin-when-cross-origin"
     response.headers["Permissions-Policy"] = "camera=(), microphone=(), geolocation=()"
-    response.headers["Cache-Control"] = "public, max-age=31536000, immutable" if response.mimetype in {"text/css", "application/javascript", "image/svg+xml", "image/jpeg", "image/png", "image/webp", "image/avif"} else "no-cache"
-    response.headers["Content-Security-Policy"] = (
-        "default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; "
-        "script-src 'self' 'unsafe-inline'; font-src 'self' data:; connect-src 'self' https:; "
-        "frame-ancestors 'self'; base-uri 'self'; form-action 'self'"
+    response.headers["Cross-Origin-Opener-Policy"] = "same-origin"
+    response.headers["Cross-Origin-Resource-Policy"] = "same-origin"
+    if request.is_secure:
+        response.headers["Strict-Transport-Security"] = "max-age=31536000; includeSubDomains"
+    response.headers["Cache-Control"] = (
+        "public, max-age=3600, must-revalidate"
+        if response.mimetype in {"text/css", "application/javascript", "image/svg+xml", "image/jpeg", "image/png", "image/webp", "image/avif"}
+        else "no-cache"
     )
-    # Load final visual overrides on every HTML page without editing each template.
+    response.headers["Content-Security-Policy"] = (
+        "default-src 'self'; img-src 'self' data:; media-src 'none'; object-src 'none'; "
+        "frame-src 'none'; manifest-src 'self'; style-src 'self' 'unsafe-inline'; "
+        "script-src 'self' 'unsafe-inline'; font-src 'self' data:; connect-src 'self'; "
+        "frame-ancestors 'self'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests"
+    )
+    # Load the final visual layer on every HTML page without duplicating the link in templates.
     if response.mimetype == "text/html":
         body = response.get_data(as_text=True)
-        verification = '<meta name="google-site-verification" content="0YQ4PDbmavGsNpZHhoh43br5nLGoIBmyzWNh6VnoO5g">';
-        if verification not in body and "</head>" in body:
-            body = body.replace("</head>", verification + "</head>");
         override = '<link rel="stylesheet" href="/static/css/visual-overrides.css?v=final">'
         if override not in body and "</head>" in body:
             body = body.replace("</head>", override + "</head>")
@@ -78,7 +84,14 @@ def health():
 
 @app.route("/robots.txt")
 def robots():
-    return send_from_directory(BASE / "static", "robots.txt", mimetype="text/plain")
+    body = (
+        "User-agent: *\n"
+        "Allow: /\n"
+        f"Sitemap: {request.url_root.rstrip('/')}/sitemap.xml\n"
+    )
+    response = make_response(body)
+    response.headers["Content-Type"] = "text/plain; charset=utf-8"
+    return response
 
 @app.route("/sitemap.xml")
 def sitemap():
