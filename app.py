@@ -45,6 +45,9 @@ def security_headers(response):
     # Load final visual overrides on every HTML page without editing each template.
     if response.mimetype == "text/html":
         body = response.get_data(as_text=True)
+        verification = '<meta name="google-site-verification" content="0YQ4PDbmavGsNpZHhoh43br5nLGoIBmyzWNh6VnoO5g">';
+        if verification not in body and "</head>" in body:
+            body = body.replace("</head>", verification + "</head>");
         override = '<link rel="stylesheet" href="/static/css/visual-overrides.css?v=final">'
         if override not in body and "</head>" in body:
             body = body.replace("</head>", override + "</head>")
