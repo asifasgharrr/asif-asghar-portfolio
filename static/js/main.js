@@ -91,7 +91,7 @@
     let lastFocused = null;
     const apply = theme => {
       if (!themes.includes(theme)) theme = 'midnight';
-      document.body.dataset.theme = theme;
+      document.documentElement.dataset.theme = theme;\n      document.body.dataset.theme = theme;
       localStorage.setItem(key, theme);
       options.forEach(o => {
         const active = o.dataset.theme === theme;
