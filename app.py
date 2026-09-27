@@ -1,4 +1,4 @@
-from flask import Flask, render_template, abort, jsonify, send_from_directory, request, make_response
+from flask import Flask, render_template, abort, jsonify, request, make_response
 import json
 from pathlib import Path
 from xml.sax.saxutils import escape
