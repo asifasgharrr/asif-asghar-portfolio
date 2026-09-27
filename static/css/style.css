@@ -266,3 +266,9 @@ body.theme-lock{overflow:hidden}
 .mobile-menu[inert],.theme-panel[inert]{pointer-events:none}
 @media(max-width:600px){.project{padding-bottom:74px}.btn,.nav-pill,.filter,.menu-toggle,.profile-links a{min-height:44px}.btn,.nav-pill,.filter{display:inline-flex;align-items:center;justify-content:center}.menu-toggle{min-width:44px;align-items:center;justify-content:center}}
 @media(prefers-reduced-motion:reduce){.skip-link{transition:none!important}}
+
+/* No-JS resilience: content remains visible if scripts fail or are blocked. */
+.reveal{opacity:1;transform:none}
+.js .reveal{opacity:0;transform:translateY(28px)}
+.js .reveal.show{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.js .reveal{opacity:1;transform:none!important}}
