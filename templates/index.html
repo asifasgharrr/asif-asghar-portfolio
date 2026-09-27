@@ -12,7 +12,7 @@
   <link rel="icon" href="{{ url_for('static', filename='assets/brand-mark.svg') }}"><link rel="manifest" href="{{ url_for('static', filename='manifest.webmanifest') }}">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/theme-fixes.css') }}">
-  <script>try{var t=localStorage.getItem("asif-portfolio-theme");document.documentElement.dataset.theme=t||"midnight";}catch(e){}</script>
+  <script>document.documentElement.classList.add("js");try{var t=localStorage.getItem("asif-portfolio-theme");document.documentElement.dataset.theme=t||"midnight";}catch(e){}</script>
 </head>
 <body>
 <a class="skip-link" href="#top">Skip to content</a>
