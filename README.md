@@ -1,24 +1,75 @@
-# Asif Asghar — Portfolio V6
+# Asif Asghar — Business Intelligence & Operations Portfolio
 
-A Python/Flask personal portfolio focused on business intelligence, operations analytics, pricing, automation, decision systems and practical web work.
+Live portfolio: https://asif-asghar-portfolio.vercel.app/
 
-## Included
-- Premium dark analytical visual system
-- Animated hero/orbit visualization
-- Responsive mobile navigation
-- Scroll reveal effects and reading progress bar
-- Project filtering
-- Individual case-study pages with problem / approach / capabilities / stack
-- Career timeline
-- Skills architecture
-- Decision-intelligence workflow visualization
-- Public GitHub showcase link for New Umer Holidays
-- SEO metadata, Open Graph tags, canonical URLs, favicon, robots.txt and sitemap route
-- Basic browser/security headers
-- Confidentiality-aware descriptions for internal IZI work
-- Public LinkedIn/GitHub profile layer
-- Education and continuous-learning section
-- GitHub-hosted profile visual with graceful external dependency
+A Python/Flask personal portfolio focused on business intelligence, operations analytics, pricing and revenue analysis, process improvement, automation, decision-support systems and practical web delivery.
+
+## What this portfolio demonstrates
+
+- Business problem framing and operational analysis
+- Pricing, route, FX, margin and profitability workflows
+- Analytics evolution from Excel/Sheets to automation, Power BI and Python
+- Internal decision-support and reconciliation system design
+- Responsive frontend and full-stack web delivery
+- SEO, accessibility, deployment and production-oriented QA
+- Clear separation between public implementation evidence and confidential professional work
+
+## Selected work
+
+| Project | Evidence | Access |
+| --- | --- | --- |
+| IZI Decision & Pricing Intelligence Engine | Sanitized case study | Private professional work |
+| IZI Reconciliation Centre | Sanitized case study | Private professional work |
+| IZI Operations Rate Analysis | Sanitized case study | Private professional work |
+| IZI Analytics Offline | Sanitized case study | Private professional work |
+| IZI Routing Manager | Sanitized case study | Private professional work |
+| IZI Performance & Profitability Analytics | Methodology case study | Private professional work |
+| New Umer Holidays Travel Portal | Public showcase repository + live project | Public |
+| Sangam Dry Fruit Shopify Store | Client case study | Client-owned production |
+
+Internal and client-owned systems are intentionally not published as backend source code. Their case studies describe the business problem, approach, capabilities, architecture and personal contribution without exposing private datasets, credentials, proprietary source code or commercial rules.
+
+## Public evidence
+
+- Portfolio source: https://github.com/asifasgharrr/asif-asghar-portfolio
+- New Umer Holidays showcase: https://github.com/asifasgharrr/new-umer-holidays-travel-portal
+- Live New Umer Holidays project: https://newumerholidays.com/
+- LinkedIn: https://www.linkedin.com/in/asif-asghar-b6290939a/
+
+## Architecture
+
+- `app.py` — Flask routes, project data loading, security headers and sitemap
+- `templates/` — Jinja pages
+- `static/css/style.css` — visual system and responsive layout
+- `static/css/theme-fixes.css` — theme contrast and surface corrections
+- `static/css/visual-overrides.css` — visual composition refinements
+- `static/js/main.js` — interaction, filtering, navigation, themes and scroll effects
+- `data/projects.json` — editable project/case-study content
+
+## UX and accessibility
+
+- Responsive desktop/mobile layout
+- Keyboard-accessible navigation and theme dialog
+- Skip link and visible focus states
+- Reduced-motion support
+- Mobile menu with focus management and `inert` handling
+- Theme persistence with four visual modes
+- Lazy-loaded project imagery
+- Semantic headings, labels and navigation landmarks
+
+## SEO and deployment
+
+- Canonical URLs
+- Meta description and Open Graph/Twitter metadata
+- Person and CreativeWork structured data
+- Dynamic `robots.txt` and `sitemap.xml`
+- Google Search Console and Bing Webmaster Tools sitemap integration
+- Security headers and static-asset caching
+- Vercel deployment connected to the GitHub main branch
+
+## Confidentiality rule
+
+Professional IZI work and client projects may contain employer- or client-owned systems, data, pricing, credentials or source code. This repository therefore uses sanitized descriptions and demonstration visuals where necessary. Public evidence is provided only where publication is appropriate.
 
 ## Run locally
 
@@ -34,64 +85,8 @@ python app.py
 
 Then open `http://127.0.0.1:5000`.
 
-## Content / privacy rule
-Internal IZI work is intentionally generalized. Do not add internal company datasets, customer/agent names, private pricing, credentials, proprietary source code, financial reports or other confidential information to the public site.
+## Maintenance
 
-The New Umer Holidays public repository is a showcase repository; production source remains private.
+When adding a new project, keep the case study interview-defensible: state the business problem, explain the approach, identify capabilities and personal contribution, and clearly mark whether the implementation is public, client-owned or confidential. Avoid unsupported impact numbers or fabricated testimonials.
 
-## V6 additions
-- Personal SVG brand mark and installable web manifest
-- Structured Person / CreativeWork JSON-LD metadata
-- Proof-of-work section explaining sanitized case-study evidence
-- Health endpoint for deployment checks
-- Static asset caching and API no-store policy
-
-## Public profile links
-- GitHub: https://github.com/asifasgharrr
-- LinkedIn: https://www.linkedin.com/in/asif-asghar-b6290939a/
-
-## Final deployment checklist
-1. Replace the temporary local URL with the real production domain in any deployment-specific SEO configuration.
-2. Add an approved professional photo only if wanted.
-3. Add an approved public contact method (email / LinkedIn) if desired.
-4. Add approved screenshots for sanitized IZI case studies and actual client visuals.
-5. Confirm all external project links and client publication permissions.
-6. Run a final accessibility, mobile, performance and link check.
-7. Deploy Flask behind a production WSGI server; do not use Flask's debug server in production.
-8. Only after portfolio content is approved, update the CV from this portfolio as the source of truth.
-
-## Architecture
-
-- `app.py` — Flask routes, project data loading, security headers and sitemap
-- `templates/` — Jinja pages
-- `static/css/style.css` — visual system and responsive layout
-- `static/js/main.js` — interaction, filtering, navigation and scroll effects
-- `data/projects.json` — editable project/case-study content
-
-
-### Visual evidence
-Internal IZI project cards use generated demonstration visuals derived from the documented feature/workflow profiles. They are not screenshots of private company data. The portfolio intentionally avoids customer-level records, credentials, proprietary source code and private commercial figures.
-
-
-### Visual treatment
-Each project uses a distinct generated demonstration visual or editorial mockup rather than repeating one dashboard screenshot. Internal IZI visuals are illustrative only and contain no private company records.
-
-
-### Business Operations scope
-The portfolio's IZI role section is grounded in the internal August 2026 management progress summary and September 2026 five-application source review. It represents recurring work across pricing, route/FX/margin governance, API monitoring and partner follow-up, accounting and reconciliation support, management reporting, agent/team continuity, RemitRio support, and delivery of internal operational-intelligence tools. Internal figures, customer records, credentials and proprietary source code are intentionally excluded from the public site.
-
-
-### V11 UX pass
-Hero composition was tightened so the portrait remains unobstructed, technical nodes stay outside the face area, and the theme selector is presented as a styled modal rather than raw controls. Business Operations content remains detailed and source-grounded.
-
-
-## V13 QA hardening
-- Fixed hero first-viewport composition so the full headline and portrait composition are visible on short desktop screens.
-- Fixed theme contrast by removing remaining fixed dark-theme text colors from the primary UI surfaces.
-- Added keyboard focus trapping and focus restoration for the theme dialog.
-- Added long-lived caching for static image assets.
-- Preserved reduced-motion support and all four visual themes.
-
-## Deployment sync
-- GitHub repository is connected to the portfolio's Vercel project.
-- Main branch contains the latest visual override and hero composition changes.
+© 2026 Asif Asghar
