@@ -121,7 +121,21 @@
 <section id="journey" class="section journey"><div class="section-label reveal"><span>05</span> JOURNEY</div><div class="heading reveal"><div class="eyebrow">CAREER EVOLUTION</div><h2>Operations → Systems<br><span>→ Analytics → Intelligence</span></h2></div><div class="timeline">{% for year, company, role, desc in experience %}<div class="timeline-row reveal"><time>{{ year }}</time><div><small>{{ company }}</small><h3>{{ role }}</h3><p>{{ desc }}</p>{% if role == 'Business Operations Analyst — Operations & Pricing' %}<ul class="role-detail"><li>Pricing, route, FX and margin governance across recurring operating workflows.</li><li>API monitoring, error analysis, partner follow-up and service-control work.</li><li>Accounting portal support plus bank and agent-balance reconciliation.</li><li>Management reporting, profitability analysis, dashboards and team-performance reporting.</li><li>Internal analytics and decision-support product delivery alongside daily operations.</li><li>Agent/team continuity support, issue handling, training and cross-business reporting support.</li></ul>{% endif %}</div></div>{% endfor %}</div></section>
 
 
-<section id="proof" class="section proof"><div class="section-label reveal"><span>06</span> PROOF OF WORK</div><div class="heading reveal"><div class="eyebrow">HOW THE PROJECTS ARE PRESENTED</div><h2>Evidence without exposing<br><span>confidential information.</span></h2><p>Public case studies separate the business problem, system design and contribution from private company data, using generated visuals for internal applications. Public links are provided where the project can be safely inspected.</p></div><div class="proof-grid"><article class="proof-card reveal"><b>01</b><h3>Business context</h3><p>What operational problem the work was designed to address.</p></article><article class="proof-card reveal"><b>02</b><h3>System thinking</h3><p>How data, workflows, controls and technology fit together.</p></article><article class="proof-card reveal"><b>03</b><h3>Safe evidence</h3><p>Generated demonstration visuals and public repositories where disclosure is appropriate.</p></article><article class="proof-card reveal"><b>04</b><h3>Personal contribution</h3><p>Clear separation between your role, tools used and the resulting capability.</p></article></div></section>
+<section id="proof" class="section proof">
+  <div class="section-label reveal"><span>06</span> PROFESSIONAL WORK</div>
+  <div class="heading reveal">
+    <div class="eyebrow">CONFIDENTIALITY & EVIDENCE</div>
+    <h2>Real professional work.<br><span>Presented responsibly.</span></h2>
+    <p>Several of the analytics systems, automation workflows and operational applications shown here were developed as part of official employment. Their production source code, internal datasets, credentials, client information and proprietary business rules cannot be published publicly.</p>
+    <p>That is a confidentiality and ownership requirement — not an absence of work. The portfolio therefore presents the <strong>problem, approach, architecture, capabilities and personal contribution</strong> while using generalized descriptions and generated demonstration visuals where necessary.</p>
+  </div>
+  <div class="proof-grid">
+    <article class="proof-card reveal"><b>01</b><h3>Professional work</h3><p>Internal IZI systems are documented as anonymized case studies so the business problems and technical contribution remain visible without exposing employer-owned material.</p></article>
+    <article class="proof-card reveal"><b>02</b><h3>Safe evidence</h3><p>Internal application visuals use demonstration data. No customer records, credentials, private pricing or proprietary source code are published.</p></article>
+    <article class="proof-card reveal"><b>03</b><h3>Public projects</h3><p>Projects that can be safely shared include public documentation, repositories or live links. These provide inspectable evidence of implementation outside confidential employment work.</p></article>
+    <article class="proof-card reveal"><b>04</b><h3>Personal contribution</h3><p>Each case study separates the business problem from the work performed: requirements, analytical logic, workflow design, development, controls, QA and delivery.</p></article>
+  </div>
+</section>
 
 <section id="learning" class="section learning">
   <div class="section-label reveal"><span>07</span> LEARNING</div>
@@ -153,7 +167,22 @@
 
 <section id="skills" class="section skills"><div class="section-label reveal"><span>08</span> TOOLKIT</div><div class="heading reveal"><div class="eyebrow">SKILLS & TECHNOLOGY</div><h2>Technology follows<br><span>the business problem.</span></h2></div><div class="skill-groups">{% for group, skills in skill_groups.items() %}<article class="skill-group reveal"><div class="skill-head"><span>{{ '%02d'|format(loop.index) }}</span><h3>{{ group }}</h3></div><div class="skill-list">{% for skill in skills %}<span>{{ skill }}</span>{% endfor %}</div></article>{% endfor %}</div></section>
 
-<section class="section proof"><div class="section-label reveal"><span>09</span> PUBLIC WORK</div><div class="proof-grid"><div class="proof-copy reveal"><div class="eyebrow">GITHUB SHOWCASE</div><h2>One project is public.<br><span>The production source stays private.</span></h2><p>The New Umer Holidays Travel Portal has a public showcase repository with documentation and screenshots. Confidential internal systems are described at a generalized level and do not expose company data, credentials or proprietary source.</p><a class="btn primary" href="https://github.com/asifasgharrr/new-umer-holidays-travel-portal" target="_blank" rel="noopener noreferrer">View public showcase ↗</a></div><div class="terminal reveal"><div class="terminal-top"><i></i><i></i><i></i><span>asif / portfolio</span></div><div class="terminal-body"><p><span class="dim">$</span> whoami</p><p class="accent">asif-asghar</p><p><span class="dim">$</span> focus</p><p>business-intelligence</p><p>operations-analytics</p><p>automation</p><p>decision-systems</p><p><span class="dim">$</span> principle</p><p class="accent">understand_business();</p><p class="accent">build_system();</p></div></div></div></section>
+<section class="section proof">
+  <div class="section-label reveal"><span>09</span> PUBLIC WORK</div>
+  <div class="proof-grid">
+    <div class="proof-copy reveal">
+      <div class="eyebrow">PUBLIC REPOSITORY · LIVE PROJECT</div>
+      <h2>Inspect what can be shared.<br><span>Understand what stays private.</span></h2>
+      <p>The New Umer Holidays Travel Portal has a public showcase repository and a live production website. Its public materials demonstrate planning, implementation and delivery without exposing the private production source.</p>
+      <p>For employer-owned systems, the same principle applies: the portfolio documents the work at a useful technical level while protecting proprietary information.</p>
+      <div class="actions">
+        <a class="btn primary" href="https://github.com/asifasgharrr/new-umer-holidays-travel-portal" target="_blank" rel="noopener noreferrer">View public GitHub ↗</a>
+        <a class="btn" href="https://newumerholidays.com/" target="_blank" rel="noopener noreferrer">View live project ↗</a>
+      </div>
+    </div>
+    <div class="terminal reveal"><div class="terminal-top"><i></i><i></i><i></i><span>asif / portfolio</span></div><div class="terminal-body"><p><span class="dim">$</span> whoami</p><p class="accent">asif-asghar</p><p><span class="dim">$</span> focus</p><p>business-intelligence</p><p>operations-analytics</p><p>automation</p><p>decision-systems</p><p><span class="dim">$</span> public</p><p>documentation</p><p>showcase-repositories</p><p>live-projects</p><p><span class="dim">$</span> principle</p><p class="accent">protect_confidentiality();</p><p class="accent">show_the_work();</p></div></div>
+  </div>
+</section>
 
 <section id="contact" class="section contact"><div class="contact-box reveal"><div class="eyebrow">10 · NEXT STEP</div><h2>Let's build something<br><span>useful.</span></h2><p>For opportunities, collaboration or project conversations, the best public starting point is GitHub.</p><div class="actions"><a class="btn primary" href="https://www.linkedin.com/in/asif-asghar-b6290939a/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn ↗</a><a class="btn" href="https://github.com/asifasgharrr" target="_blank" rel="noopener noreferrer">View GitHub ↗</a><a class="btn" href="#top">Back to top ↑</a></div></div></section>
 </main>
