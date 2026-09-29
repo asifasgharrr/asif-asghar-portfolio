@@ -272,3 +272,19 @@ body.theme-lock{overflow:hidden}
 .js .reveal{opacity:0;transform:translateY(28px)}
 .js .reveal.show{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){.js .reveal{opacity:1;transform:none!important}}
+
+/* Professional credibility / evidence presentation */
+.appearance-trigger{display:inline-flex;align-items:center;gap:6px}
+.appearance-trigger span:first-child{font-size:13px;line-height:1}
+.credibility{padding-top:55px}
+.credibility-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.credibility-card{min-height:255px;padding:26px;border:1px solid var(--line);border-radius:20px;background:linear-gradient(145deg,rgba(16,28,37,.78),rgba(8,14,20,.65));position:relative;overflow:hidden;transition:.3s}
+.credibility-card:hover{transform:translateY(-5px);border-color:rgba(100,225,200,.28)}
+.credibility-card>span{display:block;color:var(--a);font-size:10px;letter-spacing:.15em;margin-bottom:22px}
+.credibility-card small{display:block;color:var(--muted);font-size:9px;letter-spacing:.15em}
+.credibility-card h3{font-size:22px;line-height:1.05;letter-spacing:-.035em;margin:10px 0 12px}
+.credibility-card p{color:var(--muted);font-size:13px;max-width:430px}
+.text-link{display:inline-flex;margin-top:12px;color:var(--a);font-size:11px;font-weight:800}
+.text-link:hover{text-decoration:underline;text-underline-offset:4px}
+.evidence-badge{display:inline-flex;align-items:center;width:max-content;margin-top:18px;padding:6px 9px;border:1px solid var(--line);border-radius:999px;color:var(--muted);font-size:8px;letter-spacing:.12em;font-weight:800;background:rgba(255,255,255,.02)}
+@media(max-width:900px){.credibility-grid{grid-template-columns:1fr}.credibility-card{min-height:0}.appearance-label{display:none}}
