@@ -216,17 +216,19 @@
     "number": "07",
     "category": "Client / Web",
     "title": "New Umer Holidays Travel Portal",
-    "short": "A production travel portal translated from business requirements into a live digital platform.",
-    "description": "A modern travel platform combining flight search, destination information, travel guides, deals and packages, WhatsApp communication, lead generation, content management and SEO-focused pages.",
+    "short": "A live production travel portal with flight search, travel content, lead generation, structured SEO and ongoing platform optimization.",
+    "description": "A production travel platform combining flight search, destination information, travel guides, deals and packages, WhatsApp communication, lead generation, content management, structured SEO and a growing publishing/monetization foundation.",
     "problem": "The business needed a stronger digital presence that could present travel services, destinations and content while supporting lead generation and future growth.",
-    "approach": "Planned the site around real business requirements, built the frontend and backend integration, structured content and SEO foundations, connected flight search, deployed the platform and continued mobile and performance optimization.",
+    "approach": "Planned the platform around real business requirements, built the frontend and backend integration, structured content and technical SEO, connected flight search, implemented responsive/mobile improvements, configured Search Console and Bing Webmaster foundations, and prepared the site for AdSense review and consent management.",
     "capabilities": [
       "Flight search integration",
       "Destination pages",
       "Travel guides / blog",
       "Lead generation",
       "Content management",
-      "Technical SEO"
+      "Technical SEO",
+      "Search indexing / webmaster setup",
+      "AdSense readiness"
     ],
     "architecture": [
       "Next.js",
@@ -249,7 +251,8 @@
       "SQL",
       "Vercel"
     ],
-    "image": "new-umer-holidays.jpg"
+    "image": "new-umer-holidays.jpg",
+    "status": "LIVE · SEO FOUNDATION COMPLETE · ADSENSE REVIEW REQUESTED"
   },
   {
     "slug": "sangam-dry-fruit",
