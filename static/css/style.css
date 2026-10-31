@@ -291,7 +291,7 @@ body.theme-lock{overflow:hidden}
 
 
 /* Floating Appearance control: stays available while scrolling */
-.nav-right .appearance-trigger{
+.appearance-trigger{
   position:fixed;
   right:22px;
   bottom:22px;
@@ -305,11 +305,11 @@ body.theme-lock{overflow:hidden}
   backdrop-filter:blur(14px);
   box-shadow:0 12px 35px rgba(0,0,0,.22);
 }
-.nav-right .appearance-trigger:hover{
+.appearance-trigger:hover{
   transform:translateY(-2px);
 }
 @media(max-width:850px){
-  .nav-right .appearance-trigger{
+  .appearance-trigger{
     display:inline-flex;
     right:16px;
     bottom:16px;
