@@ -460,3 +460,8 @@ body.theme-lock{overflow:hidden}
 .tech-portrait:hover{transform:translateY(-4px)!important;box-shadow:0 40px 100px rgba(0,0,0,.4),0 0 80px color-mix(in srgb,var(--a) 22%,transparent)!important}
 .tech-cutout{filter:saturate(1.02) contrast(1.04)!important;object-fit:cover!important;object-position:center 18%!important;animation:tech-flicker 7s infinite steps(1,end)}
 .tech-portrait .tech-scan{top:-100px}
+
+/* Header fades once the page is scrolled; it comes back fully when hovered or focused */
+.nav.scrolled,body[data-theme] .nav.scrolled,html[data-theme] .nav.scrolled{opacity:.55;transition:opacity .35s ease,background .35s ease,border-color .35s ease,box-shadow .35s ease}
+.nav.scrolled{background:color-mix(in srgb,var(--panel) 45%,transparent)!important;box-shadow:0 10px 30px rgba(0,0,0,.12)}
+.nav.scrolled:hover,.nav.scrolled:focus-within{opacity:1}
