@@ -316,3 +316,6 @@ body.theme-lock{overflow:hidden}
     padding:10px 13px;
   }
 }
+
+/* Keep footer text clear of the floating Appearance button on small screens */
+@media(max-width:850px){footer{padding-bottom:84px}}
