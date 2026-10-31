@@ -19,7 +19,7 @@ EXPERIENCE = [
      "Handled technical support, issue categorization and escalation, recurring-issue tracking and customer communication."),
     ("2024 — 2025", "New Umer Holidays", "Graphic Designer — Part-Time / Project-Based",
      "Produced digital creative work while developing stronger analytics, BI and technical capabilities."),
-    ("2026 — Present", "IZI Services", "Business Operations Analyst — Operations & Pricing",
+    ("2026 — Present", "IZI Services", "Business Intelligence & Operations Analyst — Operations & Pricing",
      "Work across pricing, revenue, profitability, reconciliation, service operations, reporting, process improvement and internal analytics applications."),
 ]
 
