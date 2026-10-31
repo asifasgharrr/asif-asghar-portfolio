@@ -435,3 +435,22 @@ body.theme-lock{overflow:hidden}
 @keyframes tech-pulse{0%,100%{opacity:.45}50%{opacity:.95}}
 @keyframes tech-flicker{0%,92%,100%{opacity:1}93%{opacity:.82}95%{opacity:1}97%{opacity:.9}}
 @media(prefers-reduced-motion:reduce){.tech-scan,.tech-grid,.tech-corners,.tech-cutout{animation:none}.tech-scan{display:none}}
+
+/* Portrait effects: holographic color split, rotating HUD ring, floating data particles */
+.tech-ghost{position:absolute;left:0;right:0;bottom:0;top:0;z-index:1;pointer-events:none;background-image:url("/static/assets/asif-profile-cutout.png");background-size:contain;background-position:center bottom;background-repeat:no-repeat;mix-blend-mode:screen;opacity:.32}
+.tech-ghost-a{filter:hue-rotate(150deg) saturate(2.4) brightness(1.15);transform:translate(-3px,0);animation:tech-split-a 5.5s steps(1,end) infinite}
+.tech-ghost-b{filter:hue-rotate(-60deg) saturate(2.6) brightness(1.1);transform:translate(3px,0);animation:tech-split-b 5.5s steps(1,end) infinite}
+@keyframes tech-split-a{0%,88%,100%{opacity:0}89%{opacity:.5;transform:translate(-6px,1px)}91%{opacity:.2;transform:translate(-2px,0)}93%{opacity:.5;transform:translate(-5px,-1px)}95%{opacity:0}}
+@keyframes tech-split-b{0%,88%,100%{opacity:0}89%{opacity:.45;transform:translate(6px,-1px)}91%{opacity:.15;transform:translate(2px,0)}93%{opacity:.45;transform:translate(5px,1px)}95%{opacity:0}}
+.tech-ring{position:absolute;left:50%;top:14%;width:118%;aspect-ratio:1;transform:translate(-50%,-50%);z-index:0;pointer-events:none;border-radius:50%;border:1px dashed color-mix(in srgb,var(--a) 38%,transparent);animation:tech-spin 38s linear infinite}
+.tech-ring:before{content:"";position:absolute;inset:9%;border-radius:50%;border:1px solid color-mix(in srgb,var(--a2) 28%,transparent);border-top-color:var(--a);border-right-color:transparent}
+@keyframes tech-spin{to{transform:translate(-50%,-50%) rotate(360deg)}}
+.tech-dot{position:absolute;z-index:3;width:5px;height:5px;border-radius:50%;background:var(--a);box-shadow:0 0 10px var(--a);pointer-events:none;opacity:0;animation:tech-float 6s ease-in-out infinite}
+.tech-dot.d1{left:12%;top:30%;animation-delay:0s}
+.tech-dot.d2{left:84%;top:22%;background:var(--a2);box-shadow:0 0 10px var(--a2);animation-delay:1s}
+.tech-dot.d3{left:6%;top:62%;animation-delay:2s}
+.tech-dot.d4{left:90%;top:55%;animation-delay:.5s}
+.tech-dot.d5{left:20%;top:86%;background:var(--a2);box-shadow:0 0 10px var(--a2);animation-delay:3s}
+.tech-dot.d6{left:78%;top:8%;animation-delay:1.8s}
+@keyframes tech-float{0%{opacity:0;transform:translateY(12px) scale(.6)}30%{opacity:1}70%{opacity:.8}100%{opacity:0;transform:translateY(-22px) scale(1)}}
+@media(prefers-reduced-motion:reduce){.tech-ghost,.tech-ring,.tech-dot{animation:none!important}.tech-ghost{display:none}.tech-dot{opacity:.5}}
