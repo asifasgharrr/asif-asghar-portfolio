@@ -10,7 +10,7 @@
   <meta property="og:url" content="{{ request.url_root.rstrip('/') }}/">
   <title>Asif Asghar — Business Intelligence & Operations Analyst</title><script type="application/ld+json">{{ {"@context":"https://schema.org","@type":"Person","name":"Asif Asghar","jobTitle":"Business Intelligence & Operations Analyst","url":request.url_root,"image":request.url_root+"static/assets/asif-profile.jpeg","sameAs":["https://github.com/asifasgharrr","https://www.linkedin.com/in/asif-asghar-b6290939a/"] }|tojson }}</script>
   <link rel="icon" href="{{ url_for('static', filename='assets/brand-mark.svg') }}"><link rel="manifest" href="{{ url_for('static', filename='manifest.webmanifest') }}">
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') ~ '?v=2' }}">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/theme-fixes.css') }}">
   <script>document.documentElement.classList.add("js");try{var t=localStorage.getItem("asif-portfolio-theme");document.documentElement.dataset.theme=t||"midnight";}catch(e){}</script>
 </head>
