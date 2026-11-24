@@ -32,6 +32,7 @@ Internal and client-owned systems are intentionally not published as backend sou
 ## Public evidence
 
 - Portfolio source: https://github.com/asifasgharrr/asif-asghar-portfolio
+- Field guide (public edition, PDF): `static/downloads/flow-friction-fintech-field-guide.pdf`, linked from the homepage Learning section
 - New Umer Holidays showcase: https://github.com/asifasgharrr/new-umer-holidays-travel-portal
 - Live New Umer Holidays project: https://newumerholidays.com/
 - LinkedIn: https://www.linkedin.com/in/asif-asghar-b6290939a/
